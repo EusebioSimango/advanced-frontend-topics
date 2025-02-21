@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import SearchBar from "./searchBar";
 
 const Navbar = () => {
   // const [searchQuery, setSearchQuery] = useState("");
@@ -60,14 +61,8 @@ const Navbar = () => {
           </svg>
         </button>
 
-        <div>
-          <input
-            className="hidden md:block bg-gray-100 text-gray-800 px-4 py-2 border rounded-lg w-72 focus:outline-none"
-            type="text"
-            placeholder="Pesquisar..."
-          />
-        </div>
         <div className="hidden md:flex items-center gap-8">
+          <SearchBar />
           <div className="flex gap-8">
             {["Início", "Artigos"].map((item) => (
               <a
